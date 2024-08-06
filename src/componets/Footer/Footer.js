@@ -1,6 +1,6 @@
-import React from "react"
-import RestorantPic from "./../../assets/restaurant.jpg"
-import "./Footer.css"
+import React from "react";
+import RestorantPic from "./../../assets/restaurant.jpg";
+import "./Footer.css";
 
 const doormatNavigation = [
   "Home",
@@ -9,44 +9,35 @@ const doormatNavigation = [
   "Reservations",
   "Order Online",
   "Login",
-]
-const contact = ["Adress", "phone number", "email"]
-const socialMedia = ["Facebook", "Instagram", "Twitter", "Youtube"]
+];
+const contact = ["Address", "Phone Number", "Email"];
+const socialMedia = ["Facebook", "Instagram", "Twitter", "YouTube"];
 
-const FooterItems = (props) => {
-  return (
-    <div className="app__footer-items" id="footer">
-      <h1 className="app__footer-item-title">{props.sectionName}</h1>
-      <ul className="app__footer-item-names">
-        {props.sectionList.map((item) => {
-          return (
-            <li key={item}>
-              <a href={`#${item}`}>{item}</a>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
-  )
-}
+const FooterItems = ({ sectionName, sectionList }) => (
+  <div className="footer-items">
+    <h2 className="footer-item-title">{sectionName}</h2>
+    <ul className="footer-item-names">
+      {sectionList.map((item) => (
+        <li key={item}>
+          <a href={`#${item.toLowerCase().replace(" ", "-")}`}>{item}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
-const Footer = () => {
-  return (
-    <footer className="app__footer-section">
-      <div
-        className="app__about-image-box img-box-1"
-        style={{
-          backgroundImage: `url(${RestorantPic})`,
-        }}
-      />
-      <FooterItems
-        sectionName="Doormat Navigation"
-        sectionList={doormatNavigation}
-      />
+const Footer = () => (
+  <footer className="footer-section">
+    <div
+      className="footer-image-box"
+      style={{ backgroundImage: `url(${RestorantPic})` }}
+    />
+    <div className="footer-content">
+      <FooterItems sectionName="Doormat Navigation" sectionList={doormatNavigation} />
       <FooterItems sectionName="Contact" sectionList={contact} />
       <FooterItems sectionName="Social Media" sectionList={socialMedia} />
-    </footer>
-  )
-}
+    </div>
+  </footer>
+);
 
-export default Footer
+export default Footer;

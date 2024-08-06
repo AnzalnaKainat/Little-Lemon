@@ -135,4 +135,4 @@ const BookingForm = ({ submitData, dispach, availableTime }) => {
   )
 }
 
-export default BookingForm
+export default BookingForm;

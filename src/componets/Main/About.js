@@ -18,7 +18,7 @@ const About = () => {
         <h1 className="app__about-title">{aboutData.title}</h1>
         <br />
         <h4 className="app__about-subtitle">{aboutData.subTitle}</h4>
-        <br />
+        
         <p className="app__about-description">
           {aboutData.description}
           <br />
@@ -27,7 +27,6 @@ const About = () => {
         </p>
       </div>
 
-      {/* <div className="app__about-image-box-section"> */}
       <div className="app__about-image-holder">
         <div
           className="app__about-image-box img-box-1"
@@ -42,7 +41,6 @@ const About = () => {
           }}
         />
       </div>
-      {/* </div> */}
     </div>
   )
 }
