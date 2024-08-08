@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Logo from "./../../assets/Logo .svg"
+import Logo from "./../../assets/Logo.svg"
 import "./Navbar.css"
 
 const Navbar = () => {
@@ -30,14 +30,12 @@ const Navbar = () => {
           <a href="/#">Menu</a>
         </li>
         <li>
-          <a href="/#">Reservation</a>
+          <a href="/booking">Reservation</a>
         </li>
         <li>
-          <a href="/#">Order Online</a>
+          <a href="/booking">Order Online</a>
         </li>
-        <li>
-          <a href="/#">Login</a>
-        </li>
+      
       </ul>
     </nav>
   )

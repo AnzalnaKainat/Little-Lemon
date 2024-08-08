@@ -74,64 +74,80 @@ const BookingForm = ({ submitData, dispach, availableTime }) => {
   }
   return (
     <form className="boooking_form" onSubmit={handleSubmit}>
-      <fieldset>
-        <h2>Book Now</h2>
-        <div className="input_containers">
-          <label htmlFor="res-date">Choose date:</label>
-          <input
-            type="date"
-            id="res-date"
-            required
-            value={resDate}
-            onChange={(e) => handleResDateChange(e.target.value)}
-          />
-          {isValid.dateError && <p className="errors">{isValid.dateError}</p>}
-        </div>
-        <div className="input_containers">
-          <label htmlFor="res-time">Choose time:</label>
-          <select id="res-time" value={resTime} onChange={handleResTimeChange}>
-            {availableTime.availableTime.map((times) => {
-              return <option key={times}>{times}</option>
-            })}
-          </select>
-        </div>
-        <div className="input_containers">
-          <label htmlFor="guests">Number of guests:</label>
-          <input
-            type="number"
-            placeholder="1"
-            min="1"
-            max="15"
-            id="guests"
-            value={resGusset}
-            onChange={handleResGusstChange}
-          />
-          {isValid.guestsError && (
-            <p className="errors">{isValid.guestsError}</p>
-          )}
-        </div>
-        <div className="input_containers">
-          <label htmlFor="occasion">Occasion:</label>
-          <select
-            id="occasion"
-            value={resOccation}
-            onChange={handleResOccationChange}
-          >
-            <option>Birthday</option>
-            <option>Anniversary</option>
-          </select>
-          {isValid.occasionError && (
-            <p className="errors">{isValid.occasionError}</p>
-          )}
-        </div>
-        <div></div>
-        <div className="input_containers">
-          <button type="submit" className="btn_submit">
-            Make Your reservation
-          </button>
-        </div>
-      </fieldset>
-    </form>
+  <fieldset>
+    <h2>Book Now</h2>
+    <div className="input_containers">
+      <div className="label_container">
+        <label htmlFor="res-date">Choose Date</label>
+      </div>
+      <div className="input_container">
+        <input
+          type="date"
+          id="res-date"
+          required
+          value={resDate}
+          onChange={(e) => handleResDateChange(e.target.value)}
+        />
+        {isValid.dateError && <p className="errors">{isValid.dateError}</p>}
+      </div>
+    </div>
+    <div className="input_containers">
+      <div className="label_container">
+        <label htmlFor="res-time">Choose Time</label>
+      </div>
+      <div className="input_container">
+        <select id="res-time" value={resTime} onChange={handleResTimeChange}>
+          {availableTime.availableTime.map((times) => {
+            return <option key={times}>{times}</option>;
+          })}
+        </select>
+      </div>
+    </div>
+    <div className="input_containers">
+      <div className="label_container">
+        <label htmlFor="guests">Number Of Guests</label>
+      </div>
+      <div className="input_container">
+        <input
+          type="number"
+          placeholder="1"
+          min="1"
+          max="15"
+          id="guests"
+          value={resGusset}
+          onChange={handleResGusstChange}
+        />
+        {isValid.guestsError && (
+          <p className="errors">{isValid.guestsError}</p>
+        )}
+      </div>
+    </div>
+    <div className="input_containers">
+      <div className="label_container">
+        <label htmlFor="occasion">Occasion</label>
+      </div>
+      <div className="input_container">
+        <select
+          id="occasion"
+          value={resOccation}
+          onChange={handleResOccationChange}
+        >
+          <option>Birthday</option>
+          <option>Anniversary</option>
+        </select>
+        {isValid.occasionError && (
+          <p className="errors">{isValid.occasionError}</p>
+        )}
+      </div>
+    </div>
+    <div className="input_containers">
+      <button type="submit" className="btn_submit">
+        Make Your reservation
+      </button>
+    </div>
+  </fieldset>
+</form>
+
   )
 }
 

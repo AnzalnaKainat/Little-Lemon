@@ -1,9 +1,9 @@
 .booking_container{
 width: 100%;
-max-width: 1235px;
-margin: auto;
+margin: 0;
+padding: 0;
 display: flex;
 justify-content: center;
 align-items: center;
-
+background-color: #495E57;
 }

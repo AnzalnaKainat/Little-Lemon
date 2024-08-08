@@ -5,7 +5,7 @@ import image2 from "../../assets/lemon dessert.jpg"
 
 const aboutData = {
   title: "Little Lemon",
-  subTitle: "London",
+  subTitle: "Pakistan",
   description: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
     Velit officia consequat duis enim velit mollit.
     Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
